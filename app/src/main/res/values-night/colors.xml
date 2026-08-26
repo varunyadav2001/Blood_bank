@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Mode Primary Colors -->
+    <color name="primary">#EF5350</color>
+    <color name="primary_dark">#D32F2F</color>
+    <color name="primary_light">#FF867C</color>
+    <color name="primary_container">#3E1012</color>
+    <color name="on_primary">#000000</color>
+    <color name="on_primary_container">#FFCDD2</color>
+
+    <!-- Dark Mode Secondary Colors -->
+    <color name="secondary">#1E293B</color>
+    <color name="secondary_container">#334155</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#E2E8F0</color>
+
+    <!-- Dark Mode Accents -->
+    <color name="accent_teal">#38BDF8</color>
+    <color name="accent_teal_container">#0C4A6E</color>
+
+    <!-- Dark Mode Status Colors -->
+    <color name="status_available_bg">#064E3B</color>
+    <color name="status_available_text">#6EE7B7</color>
+    <color name="status_low_bg">#78350F</color>
+    <color name="status_low_text">#FDE68A</color>
+    <color name="status_critical_bg">#881337</color>
+    <color name="status_critical_text">#FECDD3</color>
+    <color name="status_verified_bg">#0C4A6E</color>
+    <color name="status_verified_text">#7DD3FC</color>
+    <color name="status_reserved_bg">#581C87</color>
+    <color name="status_reserved_text">#E9D5FF</color>
+    <color name="status_pending_bg">#334155</color>
+    <color name="status_pending_text">#CBD5E1</color>
+
+    <!-- Dark Mode Surfaces & Backgrounds -->
+    <color name="background">#090D16</color>
+    <color name="surface">#131C2E</color>
+    <color name="surface_variant">#1E293B</color>
+    <color name="surface_border">#334155</color>
+
+    <!-- Dark Mode Text Colors -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
+
+    <!-- Base Standard Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Dark Chart Colors -->
+    <color name="chart_blue">#60A5FA</color>
+    <color name="chart_rose">#FB7185</color>
+    <color name="chart_emerald">#34D399</color>
+    <color name="chart_amber">#FBBF24</color>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="800dp"
+    android:viewportWidth="360"
+    android:viewportHeight="800">
+    <!-- Laboratory Liquid Curves & Molecular Node Connections -->
+    <path
+        android:pathData="M 40,80 L 130,170 L 250,110 L 320,210 L 200,320"
+        android:strokeColor="#458B5CF6"
+        android:strokeWidth="1.8" />
+    <path android:pathData="M 40,80 A 5,5 0 1,1 40,80.1 Z" android:fillColor="#55C084FC" />
+    <path android:pathData="M 130,170 A 5,5 0 1,1 130,170.1 Z" android:fillColor="#55C084FC" />
+    <path android:pathData="M 250,110 A 5,5 0 1,1 250,110.1 Z" android:fillColor="#55C084FC" />
+    <path android:pathData="M 320,210 A 5,5 0 1,1 320,210.1 Z" android:fillColor="#55C084FC" />
+    <path android:pathData="M 200,320 A 5,5 0 1,1 200,320.1 Z" android:fillColor="#55C084FC" />
+
+    <path
+        android:pathData="M -30,360 C 90,280 210,440 390,320"
+        android:strokeColor="#35A855F7"
+        android:strokeWidth="2.0" />
+    <path
+        android:pathData="M -40,580 C 100,500 220,660 400,540"
+        android:strokeColor="#306366F1"
+        android:strokeWidth="1.8" />
+
+    <!-- Laboratory Storage Rings -->
+    <path
+        android:pathData="M 200,680 A 100,100 0 1,1 199.9,680"
+        android:strokeColor="#308B5CF6"
+        android:strokeWidth="1.5" />
+</vector>

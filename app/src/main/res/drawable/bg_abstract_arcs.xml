@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="640dp"
+    android:viewportWidth="360"
+    android:viewportHeight="640">
+    <!-- Top-Center Ripple Arcs -->
+    <path
+        android:pathData="M 100,60 A 80,80 0 0,1 260,60"
+        android:strokeColor="#687d6a2f"
+        android:strokeWidth="1.2" />
+    <path
+        android:pathData="M 70,60 A 110,110 0 0,1 290,60"
+        android:strokeColor="#15D32F2F"
+        android:strokeWidth="1.0" />
+    <path
+        android:pathData="M 40,60 A 140,140 0 0,1 320,60"
+        android:strokeColor="#0DD32F2F"
+        android:strokeWidth="1.0" />
+    <!-- Bottom-Right Cyan Ripple Arcs -->
+    <path
+        android:pathData="M 220,540 A 100,100 0 0,1 360,400"
+        android:strokeColor="#1C00B4D8"
+        android:strokeWidth="1.2" />
+    <path
+        android:pathData="M 180,540 A 140,140 0 0,1 360,360"
+        android:strokeColor="#1200B4D8"
+        android:strokeWidth="1.0" />
+</vector>

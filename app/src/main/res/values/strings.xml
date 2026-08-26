@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartBlood Connect</string>
+    <string name="app_tagline">Intelligent Blood Emergency Coordination</string>
+    <string name="google_maps_key">AIzaSyD4cMWtyZQwFmlV5krPaX8WtP8-bNwIAg8</string>
+</resources>

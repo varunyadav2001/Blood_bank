@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_hospital_home"
+        android:icon="@drawable/ic_hospital"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_hospital_requests"
+        android:icon="@drawable/ic_request"
+        android:title="Requests" />
+    <item
+        android:id="@+id/nav_hospital_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search Banks" />
+    <item
+        android:id="@+id/nav_hospital_tracking"
+        android:icon="@drawable/ic_tracking"
+        android:title="Tracking" />
+    <item
+        android:id="@+id/nav_hospital_profile"
+        android:icon="@drawable/ic_donor"
+        android:title="Profile" />
+</menu>

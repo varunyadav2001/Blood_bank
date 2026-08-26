@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_bank_home"
+        android:icon="@drawable/ic_inventory"
+        android:title="Stock" />
+    <item
+        android:id="@+id/nav_bank_inventory"
+        android:icon="@drawable/ic_search"
+        android:title="Inventory" />
+    <item
+        android:id="@+id/nav_bank_requests"
+        android:icon="@drawable/ic_request"
+        android:title="Requests" />
+    <item
+        android:id="@+id/nav_bank_transfers"
+        android:icon="@drawable/ic_transfer"
+        android:title="Transfers" />
+    <item
+        android:id="@+id/nav_bank_profile"
+        android:icon="@drawable/ic_donor"
+        android:title="Profile" />
+</menu>

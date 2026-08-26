@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="800dp"
+    android:viewportWidth="360"
+    android:viewportHeight="800">
+    <!-- Heartbeat / ECG Pulse Waves -->
+    <path
+        android:pathData="M -20,160 L 60,160 L 75,120 L 90,210 L 105,90 L 120,180 L 135,160 L 380,160"
+        android:strokeColor="#50FF5252"
+        android:strokeWidth="2.2" />
+    <path
+        android:pathData="M -20,440 L 120,440 L 135,400 L 150,490 L 165,370 L 180,460 L 195,440 L 380,440"
+        android:strokeColor="#40FF6B6B"
+        android:strokeWidth="2.0" />
+    <!-- Oversized Circulation Wave Curves -->
+    <path
+        android:pathData="M 180,60 C 260,180 330,280 330,380 C 330,462 262,530 180,530 C 98,530 30,462 30,380 C 30,280 100,180 180,60 Z"
+        android:strokeColor="#30FF5252"
+        android:strokeWidth="1.5"
+        android:fillColor="#15D32F2F" />
+    <path
+        android:pathData="M -50,620 C 90,520 230,700 410,580"
+        android:strokeColor="#25D32F2F"
+        android:strokeWidth="1.5" />
+</vector>

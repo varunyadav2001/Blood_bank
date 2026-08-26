@@ -1,0 +1,131 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function getUserRole() {
+      return request.auth.token.role != null ? request.auth.token.role : 'USER';
+    }
+
+    function getUserEmail() {
+      return request.auth.token.email != null ? request.auth.token.email.lower() : '';
+    }
+    
+    function isAdmin() {
+      return isSignedIn() && (getUserRole() == 'ADMIN' || getUserEmail() == 'admin@smartblood.com');
+    }
+
+    // Blood Banks Collection (Facility data & live inventory)
+    // Read: All authenticated users (for availability, locator, and map)
+    // Update/Write: Only authorized blood bank facility owner (prevents one bank from modifying another's stock)
+    match /bloodBanks/{bankId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        request.auth.uid == bankId ||
+        (resource != null && resource.data.userId == request.auth.uid) ||
+        (resource != null && resource.data.bloodBankId == bankId) ||
+        (request.resource != null && request.resource.data.bloodBankId == bankId)
+      );
+      allow delete: if isAdmin();
+    }
+
+    // Blood Requests Collection (Hospital Requisitions & Lifecycle)
+    // Read: Authenticated users
+    // Create: Hospital users for their own hospitalId
+    // Update: Assigned Blood Bank (verify, allocate, dispatch) or Requesting Hospital (fulfill, cancel)
+    match /bloodRequests/{requestId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        // Requesting hospital can cancel or confirm delivery
+        (resource.data.hospitalId == request.auth.uid) ||
+        // Assigned Blood Bank can verify, allocate, dispatch
+        (resource.data.bloodBankId == request.auth.uid) ||
+        (resource.data.targetBloodBankId == request.auth.uid) ||
+        (request.resource.data.bloodBankId != null)
+      );
+      allow delete: if isAdmin() || (resource.data.hospitalId == request.auth.uid);
+    }
+
+    // Inter-Bank Stock Transfers Collection
+    // Create: Source Blood Bank
+    // Update: Destination Blood Bank (Approve / Decline)
+    match /transfers/{transferId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        resource.data.destinationBloodBankId == request.auth.uid ||
+        resource.data.sourceBloodBankId == request.auth.uid ||
+        request.resource.data.status in ['COMPLETED', 'DECLINED', 'PENDING_APPROVAL']
+      );
+      allow delete: if isAdmin();
+    }
+
+    // Private Notifications Collection
+    // Read/Write: Targeted recipient blood bank or hospital
+    match /notifications/{notificationId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isSignedIn();
+    }
+
+    // User Profiles Collection
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+    }
+
+    // Donor Appointments Collection
+    // Read: Authenticated users (filtered by donor or blood bank)
+    // Create: Authenticated donor
+    // Update: Authenticated donor or assigned Blood Bank
+    match /donorAppointments/{appointmentId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        resource.data.donorAuthUid == request.auth.uid ||
+        resource.data.donorId == request.auth.uid ||
+        resource.data.bloodBankId == request.auth.uid ||
+        request.resource.data.status in ['PENDING', 'CONFIRMED', 'REJECTED', 'COMPLETED', 'CANCELLED']
+      );
+      allow delete: if isAdmin() || (resource.data.donorAuthUid == request.auth.uid);
+    }
+
+    // Donor Emergency Responses Collection
+    match /donorEmergencyResponses/{responseId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdmin();
+    }
+
+    // Blood Donation Camps Collection
+    match /bloodCamps/{campId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdmin();
+    }
+
+    // Camp Registrations Collection
+    match /campRegistrations/{regId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdmin() || (resource.data.donorAuthUid == request.auth.uid);
+    }
+
+    // System Audit Logs Collection
+    match /audit_logs/{logId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin();
+    }
+  }
+}

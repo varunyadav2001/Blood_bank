@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ========================================== -->
+    <!-- SMARTBLOOD REFERENCE UI COLOR SYSTEM      -->
+    <!-- Extracted from Reference Design Image     -->
+    <!-- ========================================== -->
+
+    <!-- Primary Brand Colors - SmartBlood Red -->
+    <color name="primary">#DC2626</color>
+    <color name="primary_dark">#B91C1C</color>
+    <color name="primary_light">#FCA5A5</color>
+    <color name="primary_container">#FEE2E2</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary">#64748B</color>
+    <color name="secondary_light">#94A3B8</color>
+    <color name="secondary_container">#F1F5F9</color>
+
+    <!-- Background & Surface Colors -->
+    <color name="background">#F8F9FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F8F9FA</color>
+    <color name="surface_border">#E5E7EB</color>
+    <color name="divider">#E5E7EB</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_tertiary">#9CA3AF</color>
+    <color name="text_hint">#D1D5DB</color>
+
+    <!-- Status Colors - From Reference -->
+    <color name="status_completed">#10B981</color>
+    <color name="status_completed_bg">#D1FAE5</color>
+    <color name="status_completed_text">#065F46</color>
+    
+    <color name="status_confirmed">#10B981</color>
+    <color name="status_confirmed_bg">#D1FAE5</color>
+    <color name="status_confirmed_text">#065F46</color>
+    
+    <color name="status_pending">#F59E0B</color>
+    <color name="status_pending_bg">#FEF3C7</color>
+    <color name="status_pending_text">#92400E</color>
+    
+    <color name="status_available">#10B981</color>
+    <color name="status_available_bg">#D1FAE5</color>
+    <color name="status_available_text">#065F46</color>
+    
+    <color name="status_critical">#DC2626</color>
+    <color name="status_critical_bg">#FEE2E2</color>
+    <color name="status_critical_text">#991B1B</color>
+    
+    <color name="status_low">#F59E0B</color>
+    <color name="status_low_bg">#FEF3C7</color>
+    <color name="status_low_text">#92400E</color>
+    
+    <color name="status_verified">#3B82F6</color>
+    <color name="status_verified_bg">#DBEAFE</color>
+    <color name="status_verified_text">#1E40AF</color>
+    
+    <color name="status_reserved">#8B5CF6</color>
+    <color name="status_reserved_bg">#EDE9FE</color>
+    <color name="status_reserved_text">#6B21A8</color>
+
+    <!-- Semantic Colors -->
+    <color name="success">#10B981</color>
+    <color name="success_light">#D1FAE5</color>
+    <color name="warning">#F59E0B</color>
+    <color name="warning_light">#FEF3C7</color>
+    <color name="error">#DC2626</color>
+    <color name="error_light">#FEE2E2</color>
+    <color name="info">#3B82F6</color>
+    <color name="info_light">#DBEAFE</color>
+
+    <!-- Blood Group Colors -->
+    <color name="blood_o_positive">#DC2626</color>
+    <color name="blood_o_negative">#B91C1C</color>
+    <color name="blood_a_positive">#EA580C</color>
+    <color name="blood_a_negative">#C2410C</color>
+    <color name="blood_b_positive">#8B5CF6</color>
+    <color name="blood_b_negative">#7C3AED</color>
+    <color name="blood_ab_positive">#0891B2</color>
+    <color name="blood_ab_negative">#0E7490</color>
+    <color name="blood_bombay">#BE123C</color>
+
+    <!-- Chart Colors -->
+    <color name="chart_red">#DC2626</color>
+    <color name="chart_orange">#F97316</color>
+    <color name="chart_green">#10B981</color>
+    <color name="chart_blue">#3B82F6</color>
+    <color name="chart_purple">#8B5CF6</color>
+    <color name="chart_yellow">#F59E0B</color>
+
+    <!-- Base Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Navigation Colors -->
+    <color name="nav_selected">#DC2626</color>
+    <color name="nav_unselected">#9CA3AF</color>
+    <color name="nav_background">#FFFFFF</color>
+
+    <!-- Launcher Icon Colors -->
+    <color name="launcher_background">#0A0F1D</color>
+
+    <!-- Shadow Colors -->
+    <color name="shadow_light">#08000000</color>
+    <color name="shadow_medium">#15000000</color>
+    <color name="shadow_strong">#25000000</color>
+</resources>
