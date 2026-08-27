@@ -6,7 +6,6 @@ A next-generation **Digital Blood Donation & Emergency Management Ecosystem** bu
 ## 🚀 Quick Links & Live Demo
 
 - 🌐 **Official Landing Page:** [View Live Site](https://varunyadav2001.github.io/Blood_bank/)
-- 🚀 **Live Demo:** [Open SmartBlood Demo](https://varunyadav2001.github.io/Blood_bank/demo.html)
 - 📥 **Download APK:** [Download Latest Version](https://github.com/varunyadav2001/Blood_bank/releases/latest/download/app-debug.apk)
 
 ---
