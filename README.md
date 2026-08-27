@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./smartblood-banner.png" alt="SmartBlood" width="850"/>
+
 # 🩸 SmartBlood
 
 ### Smart Blood Donation & Emergency Management System
@@ -8,8 +10,10 @@
 
 <br>
 
-[![Download APK](https://img.shields.io/badge/Download-APK-E53935?style=for-the-badge&logo=android&logoColor=white)](https://github.com/varunyadav2001/Blood_bank/releases/download/v1.0.0/app-debug.apk)
+[![Download APK](https://img.shields.io/badge/⬇️_Download-APK-E53935?style=for-the-badge&logo=android&logoColor=white)](https://github.com/varunyadav2001/Blood_bank/releases/download/v1.0.0/app-debug.apk)
+
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/varunyadav2001/Blood_bank)
+
 [![Release](https://img.shields.io/badge/Release-v1.0.0-00A86B?style=for-the-badge)](https://github.com/varunyadav2001/Blood_bank/releases)
 
 </div>
@@ -35,6 +39,7 @@ The application helps users manage blood requests, donation appointments, emerge
 Blood donation & emergency response
 
 </td>
+
 <td width="33%" align="center">
 
 ### 🏥 Hospital
@@ -42,6 +47,7 @@ Blood donation & emergency response
 Blood requests & emergency management
 
 </td>
+
 <td width="33%" align="center">
 
 ### 🏦 Blood Bank
