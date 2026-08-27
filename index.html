@@ -1,97 +1,958 @@
-Update the existing index.html in my Blood_bank GitHub repository.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-IMPORTANT:
-This is a BLOOD BANK project called SmartBlood.
-Do NOT use FaceTrack, Attendance, biometric attendance, students, teachers, admins, geofencing, QR attendance, or any attendance-related content.
+<title>SmartBlood • Smart Blood Donation & Emergency Management</title>
 
-Create a professional animated SmartBlood landing page.
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-Project name:
-SmartBlood
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-Subtitle:
-Smart Blood Donation & Emergency Management System
+html{
+    scroll-behavior:smooth;
+}
 
-Purpose:
-A modern Android blood donation and emergency management platform connecting Donors, Hospitals, and Blood Banks.
+body{
+    min-height:100vh;
+    background:#07070d;
+    color:white;
+    overflow-x:hidden;
+}
 
-The landing page must have a premium modern UI with:
-- Dark professional background
-- Red blood-themed glowing animated effects
-- Glassmorphism card design
-- Smooth animations
-- Responsive design for desktop and mobile
-- Professional typography
-- Blood drop icon
-- Animated floating/glowing background elements
+/* ---------- Animated Background ---------- */
 
-The page must contain:
+.bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-2;
+    background:
+        radial-gradient(circle at 15% 25%,rgba(229,57,53,.28),transparent 30%),
+        radial-gradient(circle at 85% 75%,rgba(255,0,55,.18),transparent 30%),
+        #07070d;
+}
 
-1. SmartBlood logo/title
-2. Subtitle:
-   "Smart Blood Donation & Emergency Management System"
-3. Short description:
-   "Connecting Donors • Hospitals • Blood Banks"
-4. Technology badges:
-   Java
-   XML
-   Firebase
-5. Two main buttons:
-   - LIVE DEMO
-   - DOWNLOAD APK
+.glow{
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.5;
+    animation:float 8s ease-in-out infinite alternate;
+}
 
-LIVE DEMO behavior:
-When the user clicks LIVE DEMO, DO NOT show a 404 page and DO NOT navigate to a missing URL.
+.glow.one{
+    background:#e53935;
+    left:5%;
+    top:15%;
+}
 
-Instead, open a working SmartBlood demo screen/page created inside the same GitHub Pages website.
+.glow.two{
+    background:#ff1744;
+    right:5%;
+    bottom:10%;
+    animation-delay:2s;
+}
 
-The demo screen should look like a professional SmartBlood Android application dashboard/demo.
+@keyframes float{
+    from{
+        transform:translate(0,0) scale(1);
+    }
+    to{
+        transform:translate(40px,-30px) scale(1.15);
+    }
+}
 
-The demo must include:
-- SmartBlood header
-- Blood availability summary
-- Donor section
-- Hospital section
-- Blood Bank section
-- Emergency Blood Request section
-- Blood Inventory section
-- Donation Appointment section
-- Recent blood requests
-- Emergency request cards
-- Blood group cards such as A+, A-, B+, B-, AB+, AB-, O+, O-
-- Navigation/dashboard style UI
-- Smooth transitions and animations
-- Back/Home button to return to the landing page
+/* ---------- Landing ---------- */
 
-Make the demo visually similar to a real Android blood bank application, but keep it as a web-based interactive demo.
+.page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
 
-IMPORTANT:
-Do not try to run the Android APK inside the browser.
-The LIVE DEMO should be a web UI simulation of the SmartBlood application.
+.card{
+    width:100%;
+    max-width:850px;
+    padding:2px;
+    border-radius:32px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,60,60,.8),
+        rgba(255,255,255,.08),
+        rgba(229,57,53,.7)
+    );
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.7),
+        0 0 50px rgba(229,57,53,.18);
+    animation:appear .9s ease;
+}
 
-DOWNLOAD APK behavior:
-Use this exact GitHub release APK URL:
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
 
-https://github.com/varunyadav2001/Blood_bank/releases/download/v1.0.0/app-debug.apk
+.card-inner{
+    background:rgba(15,15,25,.94);
+    border-radius:30px;
+    padding:55px 40px;
+    text-align:center;
+}
 
-The DOWNLOAD APK button must correctly open/download this APK.
+/* ---------- Logo ---------- */
 
-Add another small "View GitHub" link pointing to:
+.logo{
+    width:95px;
+    height:95px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:28px;
+    font-size:48px;
+    background:rgba(229,57,53,.12);
+    border:1px solid rgba(255,80,80,.5);
+    box-shadow:0 0 35px rgba(229,57,53,.4);
+    animation:pulse 2.5s infinite;
+}
 
-https://github.com/varunyadav2001/Blood_bank
+@keyframes pulse{
+    0%,100%{
+        transform:translateY(0);
+        box-shadow:0 0 25px rgba(229,57,53,.3);
+    }
+    50%{
+        transform:translateY(-8px);
+        box-shadow:0 0 45px rgba(229,57,53,.65);
+    }
+}
 
-Footer:
-"Built for SmartBlood"
-and GitHub link.
+h1{
+    margin-top:25px;
+    font-size:46px;
+    font-weight:800;
+    background:linear-gradient(90deg,#fff,#ff5252,#ff1744);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-Make sure all buttons actually work.
+.subtitle{
+    margin-top:8px;
+    font-size:21px;
+    font-weight:600;
+}
 
-Use a single self-contained index.html with HTML, CSS and JavaScript in the same file.
+.tagline{
+    margin-top:10px;
+    color:#ff8a8a;
+    font-size:15px;
+}
 
-Do not require React, Node.js, npm, backend, or any external build process.
+/* ---------- Tech ---------- */
 
-The GitHub Pages site must work directly from the repository root.
+.tech{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:25px 0;
+}
 
-Create the demo view using JavaScript show/hide sections or a working internal route/hash such as #demo so that clicking LIVE DEMO never produces a 404.
+.tech span{
+    padding:8px 17px;
+    border-radius:30px;
+    background:rgba(229,57,53,.1);
+    border:1px solid rgba(255,80,80,.35);
+    color:#ff7070;
+    font-size:13px;
+    font-weight:600;
+}
 
-Keep the design premium, professional, modern and suitable for an MCA project presentation.
+.description{
+    max-width:680px;
+    margin:20px auto 30px;
+    color:#b9bac8;
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* ---------- Buttons ---------- */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    border:none;
+    text-decoration:none;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 30px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.demo-btn{
+    color:white;
+    background:linear-gradient(90deg,#e53935,#ff1744);
+    box-shadow:0 10px 30px rgba(229,57,53,.35);
+}
+
+.download-btn{
+    color:#fff;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.demo-btn:hover{
+    box-shadow:0 15px 40px rgba(229,57,53,.6);
+}
+
+.download-btn:hover{
+    background:rgba(255,255,255,.13);
+}
+
+/* ---------- Footer ---------- */
+
+.footer{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    color:#77798b;
+    font-size:13px;
+}
+
+.footer a{
+    color:#ff5252;
+    text-decoration:none;
+}
+
+/* ==================================================
+   DEMO SCREEN
+================================================== */
+
+#demo{
+    display:none;
+    min-height:100vh;
+    padding:30px 20px 60px;
+    animation:demoIn .6s ease;
+}
+
+@keyframes demoIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.demo-container{
+    max-width:1150px;
+    margin:auto;
+}
+
+/* Header */
+
+.demo-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 25px;
+    margin-bottom:25px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(20,20,30,.85);
+    border-radius:22px;
+    backdrop-filter:blur(15px);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-icon{
+    font-size:32px;
+}
+
+.brand h2{
+    font-size:22px;
+}
+
+.brand small{
+    color:#999;
+}
+
+.back-btn{
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.06);
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.back-btn:hover{
+    background:#e53935;
+}
+
+/* Welcome */
+
+.welcome{
+    margin-bottom:25px;
+}
+
+.welcome h2{
+    font-size:30px;
+}
+
+.welcome p{
+    color:#999;
+}
+
+/* Stats */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.stat{
+    padding:22px;
+    border-radius:20px;
+    background:rgba(20,20,30,.9);
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-5px);
+    border-color:rgba(229,57,53,.5);
+}
+
+.stat-icon{
+    font-size:25px;
+}
+
+.stat h3{
+    font-size:25px;
+    margin-top:10px;
+}
+
+.stat p{
+    color:#888;
+    font-size:13px;
+}
+
+/* Sections */
+
+.section-title{
+    margin:30px 0 15px;
+    font-size:21px;
+}
+
+/* Feature Cards */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.feature{
+    padding:25px;
+    border-radius:20px;
+    background:linear-gradient(
+        145deg,
+        rgba(30,30,42,.95),
+        rgba(15,15,25,.95)
+    );
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-6px);
+    border-color:rgba(229,57,53,.5);
+}
+
+.feature .icon{
+    font-size:32px;
+}
+
+.feature h3{
+    margin:12px 0 6px;
+}
+
+.feature p{
+    color:#999;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* Blood Groups */
+
+.blood-groups{
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    gap:10px;
+}
+
+.blood{
+    padding:18px 5px;
+    text-align:center;
+    border-radius:15px;
+    background:rgba(229,57,53,.09);
+    border:1px solid rgba(229,57,53,.25);
+    font-weight:700;
+    transition:.3s;
+}
+
+.blood:hover{
+    background:#e53935;
+    transform:scale(1.05);
+}
+
+.blood small{
+    display:block;
+    margin-top:5px;
+    color:#999;
+    font-size:10px;
+}
+
+.blood:hover small{
+    color:white;
+}
+
+/* Requests */
+
+.requests{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.request{
+    padding:20px;
+    border-radius:18px;
+    background:rgba(20,20,30,.9);
+    border-left:4px solid #e53935;
+}
+
+.request-top{
+    display:flex;
+    justify-content:space-between;
+}
+
+.badge{
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:10px;
+    background:rgba(229,57,53,.15);
+    color:#ff6565;
+}
+
+.request p{
+    color:#999;
+    margin-top:8px;
+    font-size:13px;
+}
+
+.status{
+    margin-top:12px;
+    color:#63e6be;
+    font-size:12px;
+}
+
+/* Bottom */
+
+.demo-footer{
+    margin-top:35px;
+    text-align:center;
+    color:#666;
+    font-size:12px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:800px){
+
+    h1{
+        font-size:36px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .blood-groups{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .requests{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .card-inner{
+        padding:40px 20px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .subtitle{
+        font-size:17px;
+    }
+
+    .footer{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+</div>
+
+<!-- ==================================================
+     LANDING PAGE
+================================================== -->
+
+<section class="page" id="home">
+
+    <div class="card">
+
+        <div class="card-inner">
+
+            <div class="logo">🩸</div>
+
+            <h1>SmartBlood</h1>
+
+            <div class="subtitle">
+                Smart Blood Donation & Emergency Management System
+            </div>
+
+            <div class="tagline">
+                Connecting Donors • Hospitals • Blood Banks
+            </div>
+
+            <div class="tech">
+                <span>☕ Java</span>
+                <span>⌨ XML</span>
+                <span>🔥 Firebase</span>
+                <span>📱 Android</span>
+            </div>
+
+            <p class="description">
+                A modern Android-based blood donation and emergency management
+                platform designed to connect donors, hospitals and blood banks
+                through one unified digital ecosystem.
+            </p>
+
+            <div class="buttons">
+
+                <!-- LIVE DEMO -->
+                <button class="btn demo-btn" onclick="openDemo()">
+                    🚀 LIVE DEMO
+                </button>
+
+                <!-- DOWNLOAD APK -->
+                <a
+                    class="btn download-btn"
+                    href="https://github.com/varunyadav2001/Blood_bank/releases/download/v1.0.0/app-debug.apk"
+                >
+                    📥 DOWNLOAD APK
+                </a>
+
+            </div>
+
+            <div class="footer">
+
+                <span>
+                    Built for <b>SmartBlood</b>
+                </span>
+
+                <a
+                    href="https://github.com/varunyadav2001/Blood_bank"
+                    target="_blank"
+                >
+                    GitHub Repository ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SMARTBLOOD LIVE DEMO
+================================================== -->
+
+<section id="demo">
+
+    <div class="demo-container">
+
+        <!-- Header -->
+
+        <div class="demo-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">🩸</div>
+
+                <div>
+                    <h2>SmartBlood</h2>
+                    <small>Blood Management Dashboard</small>
+                </div>
+
+            </div>
+
+            <button class="back-btn" onclick="closeDemo()">
+                ← Back to Home
+            </button>
+
+        </div>
+
+
+        <!-- Welcome -->
+
+        <div class="welcome">
+
+            <h2>Good Morning 👋</h2>
+
+            <p>
+                Welcome to SmartBlood Emergency Management System
+            </p>
+
+        </div>
+
+
+        <!-- Stats -->
+
+        <div class="stats">
+
+            <div class="stat">
+                <div class="stat-icon">🩸</div>
+                <h3>248</h3>
+                <p>Blood Units Available</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">👤</div>
+                <h3>1,240</h3>
+                <p>Registered Donors</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">🏥</div>
+                <h3>86</h3>
+                <p>Partner Hospitals</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">🚨</div>
+                <h3>12</h3>
+                <p>Active Requests</p>
+            </div>
+
+        </div>
+
+
+        <!-- Main Features -->
+
+        <h2 class="section-title">
+            ⚡ SmartBlood Services
+        </h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">👤</div>
+                <h3>Donor Management</h3>
+                <p>
+                    Register donors, manage blood groups, donation history
+                    and emergency responses.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🏥</div>
+                <h3>Hospital Requests</h3>
+                <p>
+                    Hospitals can create and track blood requirements
+                    and emergency requests.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🏦</div>
+                <h3>Blood Bank</h3>
+                <p>
+                    Manage inventory, hospital requests, approvals
+                    and blood stock transfers.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🚨</div>
+                <h3>Emergency Response</h3>
+                <p>
+                    Quickly coordinate urgent blood requirements
+                    with eligible donors and blood banks.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">📅</div>
+                <h3>Donation Appointment</h3>
+                <p>
+                    Donors can schedule donation appointments
+                    with participating blood banks.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">📊</div>
+                <h3>Live Monitoring</h3>
+                <p>
+                    Monitor requests, inventory and donation activity
+                    through real-time dashboard updates.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Blood Groups -->
+
+        <h2 class="section-title">
+            🩸 Blood Availability
+        </h2>
+
+        <div class="blood-groups">
+
+            <div class="blood">A+<small>42 Units</small></div>
+            <div class="blood">A-<small>18 Units</small></div>
+            <div class="blood">B+<small>51 Units</small></div>
+            <div class="blood">B-<small>12 Units</small></div>
+            <div class="blood">AB+<small>26 Units</small></div>
+            <div class="blood">AB-<small>8 Units</small></div>
+            <div class="blood">O+<small>63 Units</small></div>
+            <div class="blood">O-<small>28 Units</small></div>
+
+        </div>
+
+
+        <!-- Emergency Requests -->
+
+        <h2 class="section-title">
+            🚨 Emergency Blood Requests
+        </h2>
+
+        <div class="requests">
+
+            <div class="request">
+
+                <div class="request-top">
+
+                    <strong>
+                        City Care Hospital
+                    </strong>
+
+                    <span class="badge">
+                        URGENT
+                    </span>
+
+                </div>
+
+                <p>
+                    Blood Group: <b>O+</b>
+                    <br>
+                    Required Units: 4
+                    <br>
+                    Patient: Emergency Surgery
+                </p>
+
+                <div class="status">
+                    ● Donor coordination active
+                </div>
+
+            </div>
+
+
+            <div class="request">
+
+                <div class="request-top">
+
+                    <strong>
+                        Lifeline Medical Center
+                    </strong>
+
+                    <span class="badge">
+                        EMERGENCY
+                    </span>
+
+                </div>
+
+                <p>
+                    Blood Group: <b>B+</b>
+                    <br>
+                    Required Units: 3
+                    <br>
+                    Patient: Critical Care
+                </p>
+
+                <div class="status">
+                    ● Blood bank response available
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="demo-footer">
+            SmartBlood • Smart Blood Donation & Emergency Management System
+            <br>
+            Demo interface for project presentation
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* ==================================================
+   LIVE DEMO CONTROLS
+================================================== */
+
+function openDemo(){
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("demo").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    history.pushState(
+        null,
+        "",
+        "#demo"
+    );
+}
+
+
+function closeDemo(){
+
+    document.getElementById("demo").style.display = "none";
+
+    document.getElementById("home").style.display = "flex";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    history.pushState(
+        null,
+        "",
+        window.location.pathname
+    );
+}
+
+
+/* Open demo automatically if URL contains #demo */
+
+window.addEventListener("load",function(){
+
+    if(window.location.hash === "#demo"){
+        openDemo();
+    }
+
+});
+
+
+/* Browser Back Button */
+
+window.addEventListener("popstate",function(){
+
+    if(window.location.hash === "#demo"){
+        document.getElementById("home").style.display = "none";
+        document.getElementById("demo").style.display = "block";
+    }
+    else{
+        document.getElementById("demo").style.display = "none";
+        document.getElementById("home").style.display = "flex";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
