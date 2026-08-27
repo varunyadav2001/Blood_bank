@@ -11,7 +11,6 @@ SmartBlood is developed using **Java, XML, Android, and Firebase** to simplify b
 | Option | Link |
 |---|---|
 | 🌐 Official Landing Page | [Open SmartBlood Website](https://varunyadav2001.github.io/Blood_bank/) |
-| 🚀 Live Demo | [Open SmartBlood Live Demo](https://varunyadav2001.github.io/Blood_bank/demo.html) |
 | 📥 Download APK | [Download Latest APK](https://github.com/varunyadav2001/Blood_bank/releases/latest/download/app-debug.apk) |
 | 📦 GitHub Repository | [View Source Code](https://github.com/varunyadav2001/Blood_bank) |
 
