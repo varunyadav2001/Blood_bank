@@ -1,5 +1,14 @@
 <div align="center">
 
+[![🌐 LIVE DEMO](https://img.shields.io/badge/🌐_LIVE_DEMO-SmartBlood-00E5FF?style=for-the-badge)](https://varunyadav2001.github.io/Blood_bank/)
+
+[![⬇ DOWNLOAD APK](https://img.shields.io/badge/⬇_DOWNLOAD_APK-v1.0.0-E53935?style=for-the-badge&logo=android)](https://github.com/varunyadav2001/Blood_bank/releases/download/v1.0.0/app-debug.apk)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/varunyadav2001/Blood_bank)
+
+</div>
+<div align="center">
+
 <img src="./smartblood-banner.png" alt="SmartBlood" width="850"/>
 
 # 🩸 SmartBlood
